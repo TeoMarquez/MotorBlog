@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="header-info"> 
+                <a href="index.html">
+                <h1>MotorBlog</h1>
+                </a>
+            </div>
+            <form action="search.html" method="get" class="search-form">
+                <section class="user-menu">
+                    <img src="./recursos/Profile Picture/Marcianos Crew.jpg" alt="Avatar de Usuario" id="user-avatar">
+                    <div class="dropdown-menu" hidden>
+                        <ul>
+                            <li><a href="register.html">Registrarse</a></li>
+                            <li><a href="login.html">Iniciar sesión</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <label for="search" class="sr-only">Buscar:</label>
+                <input type="text" id="search" name="q" placeholder="Buscar en el blog...">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="reviews.html">Reseñas</a></li>
+                <li><a href="stories.html">Historias</a></li>
+                <li><a href="guides.html">Guías</a></li>
+                <li><a href="events.html">Eventos</a></li>
+                <li><a href="profile.html">Mi perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <style>
+        h1,h2,h3,h4,h5,p{
+        color:black;
+        }
+        footer p, h4{
+            color: whitesmoke;
+        }
+        .event-highlight -h1{
+            color: white;
+        }
+    </style>
+    <main>
+        <section class="event-highlight">
+            <h1>Evento Destacado</h1>
+            <div class="highlight-content">
+                <div class="event-details">
+                    <h2>Gran MotoFest 2024</h2>
+                    <p><strong>Ubicación:</strong> Club Hípico de San Isidro, Buenos Aires, Argentina</p>
+                    <p><strong>Fecha y Hora:</strong> 15/09/2024 - 18:00</p>
+                    <p>¡Atención, amantes de las motos! Prepárense para el Gran MotoFest 2024, el evento que está revolucionando la escena motoquera. Este año, el Club Hípico de San Isidro se transformará en el epicentro de la pasión por las motos con una exhibición impresionante de las últimas novedades, customizaciones únicas y mucho más. Vení a disfrutar de shows en vivo, food trucks con la mejor comida y una pista de pruebas para poner a prueba tu máquina. No te pierdas los sorteos y la oportunidad de conocer a las leyendas del motociclismo argentino. ¡El MotoFest promete ser una fiesta inolvidable para todos los fanáticos de las dos ruedas!</p>
+                </div>
+                <div class="event-video">
+                    <h2>Video del Evento</h2>
+                    <iframe width="1903" height="750" src="https://www.youtube.com/embed/VLY4NLPIs2g" title="STUNTER13 Stunt Moto Show" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+            </section>
+
+        <aside>
+                <h2>Próximos Eventos</h2>
+                <div class="event-card">
+                    <a href="event-details.html">
+                        <div class="card-content">
+                            <h3>Rally Moto Córdoba 2024 🔔</h3>
+                            <p><strong>Ubicación:</strong> Parque Sarmiento, Córdoba, Argentina</p>
+                            <p><strong>Fecha y Hora:</strong> 25/09/2024 - 10:00</p>
+                            <p>¡Atención, Córdoba! No te podés perder el Rally Moto Córdoba 2024. Vení a disfrutar de una jornada llena de adrenalina con carreras espectaculares, exhibiciones de motos y una gran feria de accesorios. ¡Prepará tu moto y sumate a la diversión!</p>
+                            <img src="recursos/events/cordoba.jpg" alt="Imagen del Evento 1">
+                        </div>
+                    </a>
+                </div>
+                <div class="event-card">
+                    <a href="event-details.html" class="event-link">
+                        <div class="card-content">
+                            <h3>Festival Moto Mendoza 2024 🔔</h3>
+                            <p><strong>Ubicación:</strong> Parque Central, Mendoza, Argentina</p>
+                            <p><strong>Fecha y Hora:</strong> 05/10/2024 - 15:00</p>
+                            <p>Mendoza se prepara para el Festival Moto 2024. Será un evento increíble con demostraciones de motocross, shows en vivo y una gran variedad de food trucks. ¡No te lo pierdas y vení a compartir la pasión por las motos!</p>
+                            <img src="recursos/events/Mendoza.jpg" alt="Imagen del Evento 2">
+                        </div>
+                    </a>
+                </div>
+                
+        </aside>     
+        
+    </main>
+
+    <footer>
+        <hr>
+        <section>
+            <h4><strong>Sobre el Blog</strong></h4>
+            <p>Este blog fue creado por <strong>Mateo Santiago Márquez</strong> en 2024. Todos los derechos reservados.</p>
+        </section>
+        <section>
+            <h4><strong>Contacto</strong></h4>
+            <ul>
+                <li><a href="mailto:msmarquez114@gmail.com">msmarquez114@gmail.com</a></li>
+                <li><a href="https://www.linkedin.com/in/mateo-santiago-marquez/" target="_blank">LinkedIn</a></li>
+            </ul>
+        </section>
+    </footer>
+
+    <script src="control.js"></script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Motocicletas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <style>
+            img{
+                display: inline;
+            }
+        </style>
+        <div class="header-content">
+            <div class="header-info"> 
+                <a href="index.html">
+                <h1>MotorBlog</h1>
+                </a>
+            </div>
+            <form action="search.html" method="get" class="search-form">
+                <section class="user-menu">
+                    <img src="./recursos/Profile Picture/Marcianos Crew.jpg" alt="Avatar de Usuario" id="user-avatar">
+                    <div class="dropdown-menu" hidden>
+                        <ul>
+                            <li><a href="register.html">Registrarse</a></li>
+                            <li><a href="login.html">Iniciar sesión</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <label for="search" class="sr-only">Buscar:</label>
+                <input type="text" id="search" name="q" placeholder="Buscar en el blog...">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="reviews.html">Reseñas</a></li>
+                <li><a href="stories.html">Historias</a></li>
+                <li><a href="guides.html">Guías</a></li>
+                <li><a href="events.html">Eventos</a></li>
+                <li><a href="profile.html">Mi perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="profile">
+            <aside class="profile-info">
+                <div class="profile-header">
+                    <img src="./recursos/Profile Picture/Marcianos Crew.jpg" alt="Foto de Perfil" class="profile-photo">
+                    <h1>Mateo Santiago Márquez</h1>
+                    <p>@Corte_rocho</p>
+                </div>
+                <div class="profile-details">
+                    <h2>Información de Perfil</h2>
+                    <ul>
+                        <li><strong>Correo Electrónico:</strong> msmarquez114@gmail.com</li>
+                        <li><strong>Ubicación:</strong> Salta, Arg</li>
+                        <li><strong>Teléfono:</strong> +0 800 0600</li>
+                        <li><strong>Amigos:</strong> 350</li>
+                        <div class="profile-friends">
+                            <h3>Amigos</h3>
+                            <ul>
+                                <li><a href="profile.html">
+                                    <img src="./recursos/Profile Picture/neo.webp" alt="Amigo 1" class="friend-photo">
+                                    <span>Sebastián Chinellato</span>
+                                </a></li>
+                                <li><a href="profile.html">
+                                    <img src="./recursos/Profile Picture/obie.jpg" alt="Amigo 2" class="friend-photo">
+                                    <span>Obie OneShot.</span>
+                                </a></li>
+                                <li><a href="profile.html">
+                                    <img src="./recursos/Profile Picture/jhon.jpeg" alt="Amigo 3" class="friend-photo">
+                                    <span>Jhon C. mami</span>
+                                </a></li>
+                            </ul>
+                        </div>
+                        <li><strong>Intereses:</strong> Motocicletas, Tecnología, Viajes</li>
+                    </ul>
+                </div>
+            </aside>
+    
+            <section class="profile-content">
+                <div class="pinned-post">
+                    <div class="pinned-post-header">
+                        <h2>Publicación Anclada</h2>
+                        <img src="./recursos/Profile Picture/Pinned.png" alt="Pinned Icon" class="pin-icon">
+                    </div>
+                    <div class="pinned-post-content">
+                        <p>¡Qué onda la pipoll! Este es el post que tienen que tener en la mira. Acá soltamos toda la data más fresca sobre motos: reviews, novedades y toda la movida que se está pegando. Así que no te quedes afuera y mantenete al día con lo más picantovich. Si tenés alguna duda, comentario o querés tirar algún datito ¡No aflojes! 🔥🏍️💬</p>
+                        <img src="./recursos/Post_profile/20230823112529_ruidos-molestos-motos-cortes-proyecto-ordenanza-municipal-concejo-deliberante-la-plata-villa-elisa-portada-nexonorte.webp" alt="Publicación Anclada" class="post-image">
+                    </div>
+                </div>
+    
+                <style>
+                    article:hover{
+                        transform: scale(1.0);
+                    }
+                    article .post-image:hover {
+                        filter: brightness(0.7) contrast(1.2); 
+                        transition: transform 0.3s ease; 
+                    }
+                </style>
+                <div class="posts">
+                    <article class="post">
+                        <a href="post.html">
+                            <h3>¡Mirá estas motos que están para romperla, loco! 😎</h3>
+                            <p>¡Epa, gente! Miren lo que me encontré, estas motos están tremendas. Los fierros estos son la posta, no sabés lo que es ese motor, una bestia mal. Si te copa andar en moto tira follow. Los que conocen saben 🏍️🔥</p>
+                        </a>
+                            <div class="carousel">
+                                <img src="./recursos/Post_profile/que-es-lo-que-pasa-cuando-una-moto-hace-corte-1.webp" alt="Publicación 1" class="post-image">
+                            </div>
+                            <div class="post-actions">
+                                <button class="like-btn">👍 Me gusta</button>
+                                <button class="share-btn">🔗 Compartir</button>
+                            </div>
+                       
+                    </article>
+                        
+                    <article class="post">
+                        <a href="post.html">
+                            <h3>¿Alguno ya le metió mano a esta moto nueva? 😏</h3>
+                            <p>¡Qué onda, muchachos! Vi esta moto que está pegando fuerte. ¿Alguno ya la probó en la calle? ¿Es tan buena como dicen o es puro chuku? Tira la data, así no gasto guita al dope. 🏍️💨</p>
+                        </a>
+                            <div class="carousel">
+                                <img src="./recursos/Post_profile/bmw-ce-02---riding-4.jpg" alt="Publicación 2" class="post-image">
+                            </div>
+                            <div class="post-actions">
+                                <button class="like-btn">👍 Me gusta</button>
+                                <button class="share-btn">🔗 Compartir</button>
+                            </div>
+                    </article>
+                        
+                    <article class="post">
+                        <a href="post.html">
+                            <h3>¡Lo último en motos que no te podés perder broddi!</h3>
+                            <p>¡Qué onda perris! Les traigo las últimas novedades en el mundo de las motos, y están para volarte el bocho. Desde gadgets hasta diseños locos, todo está cambiando. Si querés estar al tanto de lo nuevo y no quedarte en el molde, leé esto. Acá todos estamos para hablar de motos. 🤘🏼🛵✨</p>
+                        </a>
+                            <div class="carousel">
+                                <img src="./recursos/Post_profile/hqdefault.jpg" alt="Publicación 3" class="post-image">
+                            </div>
+                            <div class="post-actions">
+                                <button class="like-btn">👍 Me gusta</button>
+                                <button class="share-btn">🔗 Compartir</button>
+                            </div>
+                    </article>
+                </div>
+            </section>
+        </section>
+
+        <div class="share-overlay" id="share-overlay" hidden>
+            <div class="overlay-content">
+                <h3>Compartir en redes sociales</h3>
+                <style>
+                    .social-btn img {
+                        transition: transform 0.3s ease;
+                    }
+
+                    .social-btn:hover img {
+                        transform: scale(1.1); /* Ajusta el valor según tus necesidades */
+                    }
+
+                    .overlay-content button {
+                        background-color: #fff;
+                        border: none; /* Elimina el borde si lo prefieres */
+                        cursor: pointer;
+                    }
+
+                    .overlay-content button:hover {
+                        background-color: #f0c5c5;
+                    }
+                </style>
+                <div class="social-buttons">
+                    <button class="social-btn" data-app="Facebook"><img src="./recursos/Logos Register/logo de facebook.png" alt="Facebook"></button>
+                    <button class="social-btn"data-app="X"><img src="./recursos/Logos Register/Logo x.png" alt="X"></button>
+                    <button class="social-btn"data-app="Instagram"><img src="./recursos/Logos Register/ig.png" alt="Instagram"></button>
+                    <button class="social-btn"data-app="LinkedIn"><img src="./recursos/Logos Register/logo linkedin.png" alt="LinkedIn"></button>
+                    <button id="close-overlay">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <div class="overlay" id="overlay">
+        <div class="overlay-content">
+            <p id="overlay-message"></p>
+            <button id="overlay-yes">Sí</button>
+            <button id="overlay-no">No</button>
+        </div>
+    </div>
+
+    <footer>
+        <hr>
+        <section>
+            <h4><strong>Sobre el Blog</strong></h4>
+            <p>Este blog fue creado por <strong>Mateo Santiago Márquez</strong> en 2024. Todos los derechos reservados.</p>
+        </section>
+        <section>
+            <h4><strong>Contacto</strong></h4>
+            <ul>
+                <li><a href="mailto:msmarquez114@gmail.com">msmarquez114@gmail.com</a></li>
+                <li><a href="https://www.linkedin.com/in/mateo-santiago-marquez/" target="_blank">LinkedIn</a></li>
+            </ul>
+        </section>
+    </footer>
+
+    <script src="control.js"></script>
+</body>
+</html>

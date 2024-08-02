@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Motocicletas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="header-info"> 
+                <a href="index.html">
+                <h1>MotorBlog</h1>
+                </a>
+            </div>
+            <form action="search.html" method="get" class="search-form">
+                <section class="user-menu">
+                    <img src="./recursos/Profile Picture/Marcianos Crew.jpg" alt="Avatar de Usuario" id="user-avatar">
+                    <div class="dropdown-menu" hidden>
+                        <ul>
+                            <li><a href="register.html">Registrarse</a></li>
+                            <li><a href="login.html">Iniciar sesión</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <label for="search" class="sr-only">Buscar:</label>
+                <input type="text" id="search" name="q" placeholder="Buscar en el blog...">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="reviews.html">Reseñas</a></li>
+                <li><a href="stories.html">Historias</a></li>
+                <li><a href="guides.html">Guías</a></li>
+                <li><a href="events.html">Eventos</a></li>
+                <li><a href="profile.html">Mi perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <style>
+        .social-btn img {
+            transition: transform 0.3s ease;
+        }
+
+        .social-btn:hover img {
+            transform: scale(1.1); /* Ajusta el valor según tus necesidades */
+        }
+
+        .overlay-content button {
+            background-color: #fff;
+            border: none; /* Elimina el borde si lo prefieres */
+            cursor: pointer;
+        }
+
+        .overlay-content button:hover {
+            background-color: #f0c5c5;
+        }
+        .post-actions {
+            display: flex;
+            justify-content: flex-end; /* Alinea los botones a la derecha */
+            margin-top: 20px; /* Espaciado superior, ajústalo según necesites */
+        }
+
+        .post-actions button {
+            margin-left: 10px; /* Espaciado entre los botones */
+        }
+        
+    </style>
+
+    <main>
+        <section class="review">
+            <header class="review-header">
+                <h1>Ducati Panigale V4 2024</h1>
+                <div class="review-tags">
+                    <button>#Deportes</button>
+                    <button>#MotoGP</button>
+                    <button>#Ducati</button>
+                </div>
+                <p class="publish-date">Publicado el <time datetime="2024-08-02">2 de agosto de 2024</time></p>
+                <div class="author-info">
+                    <img src="./recursos/Profile Picture/Marcianos Crew.jpg" alt="Avatar del Autor" class="author-avatar">
+                    <p class="author-name">Mateo Santiago Márquez</p>
+                </div>
+            </header>
+
+            <section class="review-content">
+                <p>La Ducati Panigale V4 2024 ha llegado para redefinir el concepto de superbike. Con un motor V4 mejorado, una aerodinámica optimizada y una electrónica avanzada, esta máquina ofrece una experiencia de conducción sin igual.</p>
+                <div class="carousel">
+                    <img src="./recursos/Post/Panigale-V4-SP2-30-Anniversario-916 detallada.webp" alt="Ducati Panigale V4 2024 - Vista Detallada">
+                </div>
+                <p>Desde su diseño elegante hasta su rendimiento en pista, la Panigale V4 2024 destaca en todos los aspectos. A continuación, te presentamos una serie de fotos tomadas en diferentes momentos durante nuestras pruebas.</p>
+                <div class="carousel">
+                    <img src="./recursos/Post/Ducati-Panigale-V4-2025-3 en la pista.jpg" alt="Ducati Panigale V4 2024 - En la Pista">
+                </div>
+                <div class="carousel">
+                    <img src="./recursos/Post/vs-futbol-6-1 primer plano.webp" alt="Ducati Panigale V4 2024 - Primer Plano">
+                </div>
+                <p>La experiencia de conducción es impresionante, con una suspensión adaptativa que se ajusta a las condiciones de la pista y una potencia que impresiona incluso a los pilotos más experimentados.</p>
+            </section>
+
+            <section class="review-footer">
+                <div class="post-actions">
+                    <button class="like-btn">👍 Me gusta</button>
+                    <button class="share-btn">🔗 Compartir</button>
+                    <p class="comment-count">📩 2 Comentarios</p>
+                </div>
+
+                <section class="comments">
+                    <div class="comment">
+                        <img src="./recursos/Profile Picture/neo.webp" alt="Avatar del Comentador 1" class="comment-avatar">
+                        <div class="comment-info">
+                            <p class="commenter-name">Sebastián Chinellato</p>
+                            <p class="comment-date">2 de agosto de 2024, 14:30</p>
+                            <p class="comment-text">¡Increíble reseña! La Ducati Panigale V4 siempre ha sido una de mis favoritas. Gracias por compartir esta información detallada.</p>
+                        </div>
+                    </div>
+
+                    <div class="comment">
+                        <img src="./recursos/Profile Picture/obie.jpg" alt="Avatar del Comentador 2" class="comment-avatar">
+                        <div class="comment-info">
+                            <p class="commenter-name">Obie OneShot</p>
+                            <p class="comment-date">2 de agosto de 2024, 15:45</p>
+                            <p class="comment-text">¡Excelente artículo! Estoy considerando comprarme una Panigale V4 y tus fotos y opiniones realmente me ayudan a tomar una decisión.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <form action="submit-comment.html" method="post" class="comment-form">
+                    <h3>Deja un Comentario</h3>
+                    <label for="comment-text">Tu Comentario:</label>
+                    <textarea id="comment-text" name="comment" rows="4" required></textarea>
+                    <button type="submit">Enviar Comentario</button>
+                </form>
+            </section>
+        </section>
+
+        <div class="share-overlay" id="share-overlay" hidden>
+            <div class="overlay-content">
+                <h3>Compartir en redes sociales</h3>
+                <div class="social-buttons">
+                    <button class="social-btn" data-app="Facebook"><img src="./recursos/Logos Register/logo de facebook.png" alt="Facebook"></button>
+                    <button class="social-btn"data-app="X"><img src="./recursos/Logos Register/Logo x.png" alt="X"></button>
+                    <button class="social-btn"data-app="Instagram"><img src="./recursos/Logos Register/ig.png" alt="Instagram"></button>
+                    <button class="social-btn"data-app="LinkedIn"><img src="./recursos/Logos Register/logo linkedin.png" alt="LinkedIn"></button>
+                    <button id="close-overlay">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+        <div class="overlay" id="overlay">
+            <div class="overlay-content">
+                <p id="overlay-message"></p>
+                <button id="overlay-yes">Sí</button>
+                <button id="overlay-no">No</button>
+            </div>
+        </div>
+
+    <footer>
+        <hr>
+        <section>
+            <h4><strong>Sobre el Blog</strong></h4>
+            <p>Este blog fue creado por <strong>Mateo Santiago Márquez</strong> en 2024. Todos los derechos reservados.</p>
+        </section>
+        <section>
+            <h4><strong>Contacto</strong></h4>
+            <ul>
+                <li><a href="mailto:msmarquez114@gmail.com">msmarquez114@gmail.com</a></li>
+                <li><a href="https://www.linkedin.com/in/mateo-santiago-marquez/" target="_blank">LinkedIn</a></li>
+            </ul>
+        </section>
+    </footer>
+
+
+    <script src="control.js"></script>
+
+</body>
+</html>

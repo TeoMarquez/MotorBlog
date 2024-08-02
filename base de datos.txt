@@ -1,0 +1,76 @@
+    ======== Esquema de la Base de Datos ========
+        
+        ** Usuarios (users) **
+
+        $user_id (INT, PK, auto-incremental)
+        username (VARCHAR, único)
+        email (VARCHAR, único)
+        password_hash (VARCHAR)
+        first_name (VARCHAR)
+        last_name (VARCHAR)
+        profile_picture (VARCHAR, ruta a la imagen)
+        created_at (DATETIME)
+        updated_at (DATETIME)
+
+        ** Artículos (articles) **
+
+        $article_id (INT, PK, auto-incremental)
+        title (VARCHAR)
+        content (TEXT)
+        %author_id (INT, FK a users.user_id)
+        created_at (DATETIME)
+        updated_at (DATETIME)
+
+        ** Comentarios (comments) **
+
+        $comment_id (INT, PK, auto-incremental)
+        %article_id (INT, FK a articles.article_id)
+        %user_id (INT, FK a users.user_id)
+        content (TEXT)
+        created_at (DATETIME)
+        
+        ** Eventos (events) **
+
+        $event_id (INT, PK, auto-incremental)
+        title (VARCHAR)
+        description (TEXT)
+        date (DATETIME)
+        location (VARCHAR)
+        image (VARCHAR, ruta a la imagen)
+        created_at (DATETIME)
+        updated_at (DATETIME)
+
+        ** Inscripciones a Eventos (event_registrations) **
+
+        $registration_id (INT, PK, auto-incremental)
+        %event_id (INT, FK a events.event_id)
+        %user_id (INT, FK a users.user_id)
+        registration_date (DATETIME)
+        
+        ** Reseñas (reviews) **
+
+        $review_id (INT, PK, auto-incremental)
+        title (VARCHAR)
+        content (TEXT)
+        %author_id (INT, FK a users.user_id)
+        created_at (DATETIME)
+        updated_at (DATETIME)
+        
+        ** Etiquetas (tags) **
+
+        $tag_id (INT, PK, auto-incremental)
+        name (VARCHAR)
+       
+        ** Reseñas Etiquetas (review_tags) **
+
+        $review_id (INT, FK a reviews.review_id)
+        %tag_id (INT, FK a tags.tag_id)
+        PRIMARY KEY (review_id, tag_id)
+
+
+        #### Relaciones ####
+        Usuarios tienen Artículos y Comentarios.
+        Artículos tienen Comentarios.
+        Eventos pueden tener múltiples Inscripciones de Usuarios.
+        Usuarios pueden estar inscritos en múltiples Eventos.
+        Reseñas pueden tener múltiples Etiquetas a través de la tabla review_tags.

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reseñas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        body{
+            background-image: url("./recursos/Logos\ Register/background.jpg");
+        }
+        h1, h3{
+            color: blanchedalmond;
+        }
+        main{
+            display:inline;
+        }
+        .todo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        flex: 1;
+        padding: 20px;
+        }
+    </style>
+    <header>
+
+        <div class="header-content">
+            <div class="header-info"> 
+                <a href="index.html">
+                <h1>MotorBlog</h1>
+                </a>
+            </div>
+            <form action="search.html" method="get" class="search-form">
+                <section class="user-menu">
+                    <img src="./recursos/Profile Picture/Marcianos Crew.jpg" alt="Avatar de Usuario" id="user-avatar">
+                    <div class="dropdown-menu" hidden>
+                        <ul>
+                            <li><a href="register.html">Registrarse</a></li>
+                            <li><a href="login.html">Iniciar sesión</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <label for="search" class="sr-only">Buscar:</label>
+                <input type="text" id="search" name="q" placeholder="Buscar en el blog...">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="reviews.html">Reseñas</a></li>
+                <li><a href="stories.html">Historias</a></li>
+                <li><a href="guides.html">Guías</a></li>
+                <li><a href="events.html">Eventos</a></li>
+                <li><a href="profile.html">Mi perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <div class="todo">    
+    <main>
+        <h1>Reseñas de Motocicletas</h1>
+
+        <div class="container">
+            <div class="card">
+                <img class="background" src="./recursos/Motos - Articles/150cc.webp" alt="150cc">
+                <div class="card-content">
+                    <div class="profile-image">
+                        <a href="post.html"> ⚙️</a>
+                    </div>
+                    <h3 class="title">Cilindrada 150cc</h3>
+                </div>
+                <div class="backdrop"></div>
+            </div>
+
+            <div class="card">
+                <img class="background" src="./recursos/Motos - Articles/250cc.webp" alt="250cc">
+                <div class="card-content">
+                    <div class="profile-image">
+                        <a href="post.html"> ⚙️</a>
+                    </div>
+                    <h3 class="title">Cilindrada 250cc</h3>
+                </div>
+                <div class="backdrop"></div>
+            </div>
+
+            <div class="card">
+                <img class="background" src="./recursos/Motos - Articles/350cc.webp" alt="350cc">
+                <div class="card-content">
+                    <div class="profile-image">
+                        <a href="post.html"> ⚙️</a>
+                    </div>
+                    <h3 class="title">Cilindrada 350cc</h3>
+                </div>
+                <div class="backdrop"></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="card">
+                <img class="background" src="./recursos/Motos - Articles/ducati-panigale-2023.jpg" alt="Ducati Panigale 2023">
+                <div class="card-content">
+                    <div class="profile-image">
+                        <a href="post.html"> ⚙️</a>
+                    </div>
+                        <h3 class="title">Cilindrada 600cc</h3>
+                    </div>
+                    <div class="backdrop"></div>
+            </div>
+
+            <div class="card">
+                <img class="background" src="./recursos/Motos - Articles/bmw-2023.jpg" alt="BMW 2023">
+                <div class="card-content">
+                    <div class="profile-image">
+                        <a href="post.html"> ⚙️</a>
+                    </div>
+                    <h3 class="title">Cilindrada 750cc</h3>
+                </div>
+                <div class="backdrop"></div>
+            </div>
+
+            <div class="card">
+                <img class="background" src="./recursos/Motos - Articles/enduro.jpg" alt="Enduro">
+                <div class="card-content">
+                    <div class="profile-image">
+                        <a href="post.html"> ⚙️</a>
+                    </div>
+                    <h3 class="title">Cilindrada 1000cc</h3>
+                </div>
+                <div class="backdrop"></div>
+            </div>
+        </div>
+
+    </main>
+    </div>
+    <footer>
+        <hr>
+        <section>
+            <h4><strong>Sobre el Blog</strong></h4>
+            <p>Este blog fue creado por <strong>Mateo Santiago Márquez</strong> en 2024. Todos los derechos reservados.</p>
+        </section>
+        <section>
+            <h4><strong>Contacto</strong></h4>
+            <ul>
+                <li><a href="mailto:msmarquez114@gmail.com">msmarquez114@gmail.com</a></li>
+                <li><a href="https://www.linkedin.com/in/mateo-santiago-marquez/" target="_blank">LinkedIn</a></li>
+            </ul>
+        </section>
+    </footer>
+    
+    <!-- Overlay para mensajes emergentes -->
+    <div class="overlay" id="overlay">
+        <div class="overlay-content">
+            <p id="overlay-message"></p>
+            <button id="overlay-yes">Sí</button>
+            <button id="overlay-no">No</button>
+        </div>
+    </div>
+    
+</body>
+    <script src="./cards.js" defer></script>
+    <script src="control.js"></script>
+</html>

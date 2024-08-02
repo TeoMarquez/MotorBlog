@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descripción del Portal Web - Blog</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="header-info"> 
+                <a href="index.html">
+                <h1>MotorBlog</h1>
+                </a>
+            </div>
+            <form action="search.html" method="get" class="search-form">
+                <section class="user-menu">
+                    <img src="../recursos/Profile Picture/Marcianos Crew.jpg" alt="Avatar de Usuario" id="user-avatar">
+                    <div class="dropdown-menu" hidden>
+                        <ul>
+                            <li><a href="register.html">Registrarse</a></li>
+                            <li><a href="login.html">Iniciar sesión</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <label for="search" class="sr-only">Buscar:</label>
+                <input type="text" id="search" name="q" placeholder="Buscar en el blog...">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="./blog.html">Blog</a></li>
+                <li><a href="./Curriculum.html">Curriculum</a></li>
+                <li><a href="./curso.html">Curso</a></li>
+                <li><a href="Faq.html">Faq</a></li>
+                <li><a href="mapping.html">Mapping</a></li>
+                <li><a href="../profile.html">Mi perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <style>
+         body {
+            color: #333;
+        }
+        main {
+            max-width: 800px;
+            margin: 40px auto;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #0056b3;
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 1.5em;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        h3 {
+            font-size: 1.2em;
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+        p {
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+        div {
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+        .preview {
+            font-style: italic;
+            color: #666;
+        }
+        .comments {
+            margin-top: 15px;
+            padding-top: 10px;
+        }
+        .comment {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+        }
+        .comment p {
+            margin: 0;
+        }
+        hr {
+            border: 0;
+            height: 1px;
+            margin: 20px 0;
+        }
+    </style>
+    
+    <main>
+        <div>
+            <h1>¡Bienvenido a MotorBlog!</h1>
+            <p>En MotorBlog, nos apasiona todo lo relacionado con el mundo de las motocicletas. Desde las últimas novedades en modelos y accesorios, hasta consejos de mantenimiento y aventuras sobre dos ruedas, nuestro objetivo es brindarte toda la información que necesitas para disfrutar al máximo de tu moto.</p>
+            <p>Ya seas un piloto experimentado o un entusiasta que está empezando, aquí encontrarás artículos útiles y actualizaciones emocionantes que te mantendrán al tanto de las tendencias más recientes y los mejores consejos para tu motocicleta.</p>
+            <p>Explora nuestro blog para descubrir reseñas de motos, guías prácticas, noticias del mundo del motociclismo y mucho más. ¡Únete a nuestra comunidad y acelera tu pasión por las motocicletas!</p>
+            <hr>
+
+            <h2>Novedades del Mundo Moto</h2>
+            <p>¡No te pierdas nuestras últimas publicaciones sobre las motos más recientes y las tendencias más calientes en el mundo del motociclismo!</p>
+
+            <div>
+                <h3>La Ducati Panigale V4: El Poder en su Máxima Expresión</h3>
+                <p class="preview">"Descubre todo sobre la Ducati Panigale V4, una moto que redefine el concepto de rendimiento y estilo. Analizaremos sus características, tecnología y lo que la convierte en una de las motos más impresionantes del mercado."</p>
+                <div class="comments">
+                    <h4>Comentarios</h4>
+                    <div class="comment">
+                        <p><strong>Usuario:</strong> Martín Gómez</p>
+                        <p>"¡Increíble artículo! La Panigale V4 es una máquina impresionante. Gracias por la reseña detallada." <br> Respuestas 2 Likes</p>
+                    </div>
+                    <div class="comment">
+                        <p><strong>Usuario:</strong> Laura Fernández</p>
+                        <p>"Excelente análisis. Estoy considerando comprarla y estos detalles me ayudan mucho." <br> Respuestas 3 Likes</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+            <h2>Consejos de Mantenimiento para tu Moto</h2>
+            <p>¿No estás seguro de cómo mantener tu moto en óptimas condiciones? Encuentra aquí las mejores prácticas para cuidar cada aspecto de tu motocicleta.</p>
+
+            <div>
+                <h3>Mantenimiento de la Moto: Guía Completa</h3>
+                <p class="preview">"Aprende cómo realizar el mantenimiento básico de tu moto para garantizar un rendimiento duradero. Desde el cambio de aceite hasta la revisión de frenos, te guiamos a través de los pasos esenciales para mantener tu moto en perfectas condiciones."</p>
+                <div class="comments">
+                    <h4>Comentarios</h4>
+                    <div class="comment">
+                        <p><strong>Usuario:</strong> Alejandro Díaz</p>
+                        <p>"Muy útil, gracias por los consejos prácticos. Me aseguraré de seguir esta guía para mi próxima revisión." <br> Respuestas 4 Likes</p>
+                    </div>
+                    <div class="comment">
+                        <p><strong>Usuario:</strong> Carla López</p>
+                        <p>"Excelente información. Esto me ayudará a mantener mi moto en buen estado." <br> Respuestas 3 Likes</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+            <h2>Eventos y Encuentros</h2>
+            <p>Mantente al tanto de los próximos eventos y encuentros para motociclistas. ¡No te pierdas la oportunidad de conocer a otros entusiastas y disfrutar de emocionantes actividades sobre dos ruedas!</p>
+
+            <div>
+                <h3>Encuentro de Motociclistas en Buenos Aires</h3>
+                <p class="preview">"Únete a nosotros en el evento más esperado del año para todos los amantes de las motos. Conoce a otros motociclistas, participa en exhibiciones y disfruta de una jornada llena de emoción y adrenalina."</p>
+                <div class="comments">
+                    <h4>Comentarios</h4>
+                    <div class="comment">
+                        <p><strong>Usuario:</strong> Javier Morales</p>
+                        <p>"¡No puedo esperar para este evento! Siempre es genial conocer a otros apasionados por las motos." <br> Respuestas 6 Likes</p>
+                    </div>
+                    <div class="comment">
+                        <p><strong>Usuario:</strong> Gabriela Ruiz</p>
+                        <p>"Me encanta la idea. Definitivamente asistiré." <br> Respuestas 5 Likes</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+            <h2>Destacados de la Semana</h2>
+            <p>Explora nuestros artículos destacados de la semana, seleccionados por su relevancia y calidad para los entusiastas del motociclismo.</p>
+
+            <div>
+                <h3>Los Mejores Accesorios para tu Moto en 2024</h3>
+                <p class="preview">"Conoce los accesorios imprescindibles para mejorar tu experiencia de conducción en 2024. Desde sistemas de navegación hasta equipamiento de protección, descubre lo último en tecnología y confort para tu moto."</p>
+                <div class="comments">
+                    <h4>Comentarios</h4>
+                    <div class="comment">
+                        <p><strong>Usuario:</strong> Nicolás Herrera</p>
+                        <p>"Excelente lista de accesorios. ¡Algunos de estos definitivamente los necesitaré para mi moto!" <br> Respuestas 8 Likes</p>
+                    </div>
+                    <div class="comment">
+                        <p><strong>Usuario:</strong> Valeria Gómez</p>
+                        <p>"Muy útil, gracias por las recomendaciones." <br> Respuestas 4 Likes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>                            
+
+    <footer>
+        <hr>
+        <section>
+            <h4><strong>Sobre el Blog</strong></h4>
+            <p>Este blog fue creado por <strong>Mateo Santiago Márquez</strong> en 2024. Todos los derechos reservados.</p>
+        </section>
+        <section>
+            <h4><strong>Contacto</strong></h4>
+            <ul>
+                <li><a href="mailto:msmarquez114@gmail.com">msmarquez114@gmail.com</a></li>
+                <li><a href="https://www.linkedin.com/in/mateo-santiago-marquez/" target="_blank">LinkedIn</a></li>
+            </ul>
+        </section>
+    </footer>
+
+    <script src="../control.js"></script>
+</body>
+</html>

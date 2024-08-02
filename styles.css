@@ -1,0 +1,1386 @@
+/* Reseteo básico de márgenes y rellenos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo del body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+
+/* Estilo del header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.user-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin-bottom: 1rem;
+}
+
+#user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 0.5rem;
+    width: 150px;
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu ul li {
+    margin-bottom: 0.5rem;
+}
+
+.dropdown-menu ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-menu ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/* Todo acerca del titulo del blog */
+
+.header-info {
+    text-align: center;
+    text-decoration: none;
+}
+
+.header-info h1 {
+    margin-bottom: 0.5rem;
+}
+
+.header-info a {
+    color: inherit;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    font-size: 30px; /* Asegura que el tamaño de la letra no cambie */
+}
+
+.header-info a::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: transparent;
+    background: linear-gradient(90deg, #333, #000);
+    -webkit-background-clip: text;
+    background-clip: text;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: width 0.5s ease;
+    width: 0;
+}
+
+.header-info a:hover::before {
+    width: 100%;
+}
+
+.header-info a span {
+    display: inline-block;
+    transition: color 0.5s ease; /* Añade una transición suave */
+}
+
+.header-info a:hover span {
+    color: #000;
+}
+
+
+.header-info p {
+    margin: 0.5rem 0;
+}
+
+/* Termina el titulo del blog */
+
+.search-form {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+.search-form label {
+    display: none;
+}
+
+.search-form input[type="text"] {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-form button {
+    padding: 0.5rem 1rem;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #777;
+}
+
+    /* Estilo del nav */
+nav {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem; /* Espacio entre los elementos */
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+    color: #fff;
+}
+    /* Fin estilo del nav */
+
+/* Estilo del dropdown (si es necesario) */
+nav ul li:hover .dropdown-menu {
+    display: block;
+}
+
+/* Estilo del main */
+main {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+    /* Estilo dee articulos (index)*/
+.articles-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+    text-decoration: none;
+}
+
+article {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 1rem;
+    margin: 1rem 0;
+    width: 100%;
+    max-width: 700px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+}
+
+article img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    text-decoration: none;
+}
+
+article h3 {
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+}
+
+article h3 a {
+    color: #333;
+    text-decoration: none;
+}
+
+article h3 a:hover {
+    text-decoration: underline;
+}
+
+article a {
+    color: inherit; /* Hereda el color del texto del artículo */
+    text-decoration: none; /* Quita el subrayado */
+}
+
+article h3 a {
+    color: inherit; /* Hereda el color del texto del h3 */
+}
+
+article:hover {
+    transform: translateY(-5px);
+    transform: scale(1.1);
+    box-shadow: 0 10px 100px rgba(0,0,0,0.2);
+    background-color: #77777777;
+}
+article:hover p,
+article:hover h3 {
+    color: white;
+}
+
+.content-container {
+    width: 100%;
+    max-width: 800px; /* O el ancho que prefieras */
+}
+
+.blog {
+    text-align: center;
+    margin-bottom: 2rem; /* Espacio entre la introducción y los artículos */
+}
+
+
+
+
+    /* Fin estilo articulos */
+
+/* Estilo del footer */
+footer {
+    position: inherit;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+footer hr {
+    border: 0;
+    border-top: 1px solid #444;
+    margin: 1rem 0;
+}
+
+footer section {
+    margin-bottom: 1rem;
+}
+
+footer h4 {
+    margin-bottom: 0.5rem;
+}
+
+footer p, footer ul {
+    margin: 0;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 0.5rem;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+    /* FIn estilo del footer*/
+
+/* Estilo de register.html */
+
+.registration-form,
+.social-login {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 2rem;
+    margin: 1rem;
+}
+
+.social-login {
+    margin-right: 20%;
+}
+.registration-form {
+    max-width: 500px;
+    width: 100%;   
+}
+
+.registration-form h2,
+.social-login h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.registration-form label,
+.social-login label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="password"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.registration-form button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.registration-form button:hover {
+    background-color: #777;
+}
+
+/* Estilo de los botones sociales */
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.social-btn img {
+    width: 100px;
+    height: auto;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.overlay-content button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.overlay-content button:hover {
+    background-color: #777;
+}
+
+/* Estilo del formulario de inicio de sesión */
+.login-form {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 2rem;
+    max-width: 400px;
+    width: 100%;
+}
+
+.login-form h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background-color: #777;
+}
+
+.login-form p {
+    text-align: center;
+}
+
+.login-form a {
+    color: #555;
+    text-decoration: none;
+}
+
+.login-form a:hover {
+    text-decoration: underline;
+}
+
+    /* Estilo para la sección del perfil */
+.profile {
+    display: flex;
+    gap: 2rem;
+    margin: 1rem;
+}
+
+.profile-info {
+    width: 300px;
+    position: sticky;
+    top: 1rem;
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+.profile-header {
+    text-align: center;
+}
+
+.profile-photo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #ddd;
+    margin-bottom: 1rem;
+}
+
+.profile-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.profile-details li {
+    margin-bottom: 0.5rem;
+}
+
+.profile-content {
+    flex: 1;
+}
+
+.pinned-post {
+    width: 700px;
+    max-height: 500px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 1rem;
+    margin-bottom: 5rem;
+}
+
+.pinned-post-header {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.pin-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.pinned-post-content {
+    margin-top: 1rem;
+}
+
+.post {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.post-image {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+/* Estilo para la sección de amigos */
+.profile-friends {
+    margin-top: 1rem;
+}
+
+.profile-friends h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.profile-friends ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile-friends li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.profile-friends .friend-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.profile-friends a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #555;
+}
+
+.profile-friends a:hover {
+    text-decoration: underline;
+}
+
+.post-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.like-btn,
+.share-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.like-btn {
+    background-color: #555;
+    color: #fff;
+}
+
+.share-btn {
+    background-color: #f4f4f4;
+    color: #555;
+}
+
+.post-image {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.share-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none; /* Inicialmente oculto */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.overlay-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.social-btn img {
+    width: 30px;
+    height: 30px;
+}
+
+#close-overlay {
+    background: #f44336;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+#close-overlay:hover {
+    background: #d32f2f;
+}
+
+    /* Fin perfil */
+
+    /* TimeLine de stories.html */
+    
+    .timeline {
+        position: relative;
+        margin-top: 80px;
+        padding: 40px 0;
+    }
+    
+    .timeline::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 0;
+        height: 100%;
+        border-left: 2px solid #333;
+        width: 0;
+        transform: translateX(-50%);
+    }
+
+    .timeline-item {
+        position: relative;
+        background: #916d6d; /* Fondo oscuro para cada item */
+        margin: 20px 0;
+        height: 370px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    .timeline-item:hover {
+        background: #0e7c7c; /* Fondo oscuro para cada item */
+        filter: brightness(0.7) contrast(1.2); /* Oscurece la imagen y aumenta el contraste */
+
+    }
+
+    .timeline-item:nth-child(even) {
+        left: -5%;
+    }
+
+    .timeline-item:nth-child(odd) {
+        left: 55%;
+    }
+
+    .timeline-content {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .timeline-text {
+        margin: 0 20px;
+    }
+
+    .timeline-image img {
+        margin-left: 1%;
+        margin-top: 2.5%;
+        height: 350px;
+        width: 350px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra de la imagen */
+        transition: transform 0.3s ease;
+    }
+    
+    .timeline-image img:hover {
+        transform: scale(1.01);
+        filter: brightness(0.7) contrast(1.2); /* Oscurece la imagen y aumenta el contraste */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7); 
+    }    
+    /* Fin TimeLine stories.html */
+
+
+    /* Inicio guides.html */
+/* Estilos para la introducción */
+    .intro {
+        flex: 1;
+        padding: 20px;
+        max-width: 70%; /* Limita el ancho máximo */
+    }
+
+    .intro h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+
+    .intro h2 {
+        margin-top: 20px;
+    }
+
+    /* Estilos para el aside FAQ */
+    .faq {
+        position: -webkit-sticky; /* Para Safari */
+        background-color: #333;
+        width: 300px;
+        position: sticky;
+        top: 1rem;
+        max-height: 60vh;
+        overflow-y: auto;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .faq h2 {
+        color: white;
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .faq ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .faq li {
+        margin-bottom: 10px;
+    }
+
+    .faq a {
+        text-decoration: none;
+        color: rgba(244, 227, 227, 0.876);
+        font-weight: bold;
+    }
+
+    .faq a:hover {
+        color: #007bff;
+    }
+
+    /* Estilos para las tablas de comparación */
+    .table-container {
+        overflow-x: auto; /* Permite desplazamiento horizontal si es necesario */
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    thead th {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+    }
+
+    tbody td {
+        background-color: #f4f4f4;
+        padding: 10px;
+        border: 1px solid #ddd;
+    }
+
+    tbody tr:nth-child(even) td {
+        background-color: #e9e9e9;
+    }
+
+    tbody tr:hover td {
+        filter: brightness(0.7) contrast(1.2); /* Oscurece la imagen y aumenta el contraste */
+    }
+
+
+    /* Fin guides.html */
+
+    .event-highlight {
+        padding: 20px;
+        background-color: #f4f4f4;
+        margin-bottom: 20px;
+        max-width: 75%; /* Limita el ancho para que se centre */
+        margin: 0 auto; /* Centra el contenedor */
+    }
+    
+    .event-highlight h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    
+    .highlight-content {
+        display: flex;
+        flex-direction: column;;
+        gap: 20px;
+    }
+    
+    .event-video iframe {
+        width: 100%;
+        border: none;
+    }
+    
+    .event-details {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Estilo para el aside de eventos */
+    aside.upcoming-events {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 300px; /* Ajusta el ancho según sea necesario */
+        padding: 20px;
+    }
+    
+    aside.upcoming-events h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+    
+    .event-card {
+        display: flex;
+        flex-direction: column;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        margin-bottom: 20px;
+    }
+    
+    .event-card img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .event-card a {
+        text-decoration: none;
+        color: inherit;
+        transition: transform 0.3s ease;
+    }
+
+    .event-card a:hover {
+        transform:scale(1.05);
+        filter: brightness(0.7) contrast(1.2); /* Oscurece la imagen y aumenta el contraste */
+    }
+
+    .card-content {
+        padding: 20px;
+    }
+    
+    .card-content h3 {
+        margin-top: 0;
+    }
+    
+    .card-content a {
+        text-decoration: none;
+        color: #007bff;
+        font-weight: bold;
+    }
+    
+    .card-content a:hover {
+        text-decoration: underline;
+    }
+
+    /* fin de events.html */
+
+    /* Estilos de event-details.html */
+
+    .event-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        background-color: #f4f4f4;
+    }
+
+    .event-header h1 {
+        margin: 0;
+        font-size: 2rem;
+    }
+
+    .participant-count {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .carousel-container {
+        margin: 20px 0;
+        position: relative;
+    }
+
+    .carousel {
+        display: flex;
+        overflow-x: auto;
+        gap: 10px;
+    }
+
+    .carousel img {
+        width: 100%;
+        max-height: 400px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+
+    .carousel img:hover {
+        filter: brightness(0.7) contrast(1.2); /* Oscurece la imagen y aumenta el contraste */
+    }
+    .like-share-buttons {
+        margin: 20px 0;
+    }
+
+    .like-share-buttons button {
+        margin-right: 10px;
+    }
+
+    .registration-form {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin: 20px auto;
+    }
+
+    .registration-form h2 {
+        margin-top: 0;
+    }
+
+    .registration-form label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+
+    .registration-form input, 
+    .registration-form select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .registration-form button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .registration-form button:hover {
+        background-color: #0056b3;
+    }
+
+    
+    /* Estilos para la ampliación de imágenes del carrusel y el difuminado del fondo */
+    .expanded-img-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .expanded-img-overlay.show {
+        opacity: 1;
+    }
+
+    .expanded-img {
+        max-width: 90%;
+        max-height: 90%;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        transform: scale(0.8);
+        transition: transform 0.3s ease;
+    }
+
+    .expanded-img.show {
+        transform: scale(1);
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: #f0c5c5;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 1rem;
+        color: #fff;
+    }
+
+    .close-btn:hover {
+        background-color: #e57373;
+    }
+
+    /* Fin de event-details.html */
+
+    /* Estilo de post.html */
+    .review {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .review-header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    
+    .review-tags {
+        margin: 1rem 0;
+    }
+    
+    .review-tags button {
+        background-color: #ddd;
+        border: none;
+        border-radius: 5px;
+        padding: 0.5rem 1rem;
+        margin: 0.2rem;
+        cursor: pointer;
+    }
+    
+    .publish-date {
+        font-style: italic;
+        margin: 0.5rem 0;
+    }
+    
+    .author-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    
+    .author-avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 0.5rem;
+    }
+    
+    .review-content img {
+        max-width: 100%;
+        height: auto;
+        margin: 1rem 0;
+    }
+    
+    .review-footer {
+        margin-top: 2rem;
+    }
+    
+    .review-interactions {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    
+    .like-button, .share-button {
+        background-color: #ddd;
+        border: none;
+        border-radius: 5px;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+    }
+    
+    .comments {
+        margin-top: 2rem;
+    }
+    
+    .comment {
+        display: flex;
+        align-items: start;
+        margin-bottom: 1rem;
+    }
+    
+    .comment-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 0.5rem;
+    }
+    
+    .comment-info {
+        max-width: 100%;
+    }
+    
+    .commenter-name {
+        font-weight: bold;
+    }
+    
+    .comment-date {
+        font-style: italic;
+        font-size: 0.9rem;
+        color: #555;
+    }
+    
+    .comment-text {
+        margin-top: 0.5rem;
+    }
+    
+    .comment-form {
+        margin-top: 2rem;
+    }
+    
+    .comment-form textarea {
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+    }
+    
+    .comment-form button {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        filter: brightness(0.7) contrast(1.2); /* Oscurece y aumenta el contraste */
+    }
+
+    .social-btn img {
+        transition: filter 0.3s ease; /* Transición suave para el efecto de filtro */
+    }
+    
+    .social-btn:hover img {
+        filter: brightness(0.7) contrast(1.2); /* Oscurece y aumenta el contraste */
+    }
+    
+    .share-btn:hover {
+        filter: brightness(0.7) contrast(1.2); /* Oscurece y aumenta el contraste */
+    }
+    
+    .like-btn:hover {
+        filter: brightness(0.7) contrast(1.2); /* Oscurece y aumenta el contraste */
+    }
+    
+    .comment-form button:hover {
+        filter: brightness(0.7) contrast(1.2); /* Oscurece y aumenta el contraste */
+    }
+    
+    #close-overlay:hover {
+        filter: brightness(0.7) contrast(1.2); /* Oscurece y aumenta el contraste */
+    }
+
+    /* Fin post.html */
+
+    @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.container {
+  width: 100%;
+  width: 820px;
+  height: 340px;
+  display: flex;
+  gap: 10px;
+  margin-inline: 50px;
+  margin-bottom: 50px;
+}
+
+.card {
+  min-width: 70px;
+  height: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+
+  display: flex;
+  align-items: flex-end;
+  flex-grow: 1;
+  cursor: pointer;
+  position: relative;
+  transition: flex-grow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+
+  --transition-timing: 0.35s;
+}
+/* .card.active {
+  flex-grow: 100;
+} */
+.card:hover {
+  flex-grow: 7;
+}
+
+.card > .background {
+  position: absolute;
+  inset: 0;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.4);
+  z-index: -1;
+  transition: var(--transition-timing) ease;
+}
+.card:hover > .background {
+  filter: brightness(1);
+}
+
+.card > .card-content {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 20px;
+  overflow: hidden;
+  transition: var(--transition-timing);
+  z-index: 10;
+}
+.card:hover > .card-content {
+  inset: 20px;
+  top: auto;
+}
+
+.card-content > * {
+  transition: var(--transition-timing);
+}
+
+.card-content > .profile-image {
+  min-width: 50px;
+  max-width: 50px;
+  height: 50px;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.card:hover .profile-image {
+  border: 1px solid rgb(110, 252, 205);
+}
+.profile-image > svg {
+  stroke: #fefefe;
+}
+.card:hover .profile-image > svg {
+  stroke: rgb(110, 252, 205);
+}
+
+.card-content > .title {
+  white-space: pre;
+  margin-left: 10px;
+  translate: 0 100%;
+  opacity: 0;
+}
+.card:hover .title {
+  opacity: 1;
+  translate: 0 0;
+}
+
+.card > .backdrop {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100px;
+  z-index: 0;
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.7));
+}

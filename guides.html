@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stories</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-content">
+            <div class="header-info"> 
+                <a href="index.html">
+                <h1>MotorBlog</h1>
+                </a>
+            </div>
+            <form action="search.html" method="get" class="search-form">
+                <section class="user-menu">
+                    <img src="./recursos/Profile Picture/Marcianos Crew.jpg" alt="Avatar de Usuario" id="user-avatar">
+                    <div class="dropdown-menu" hidden>
+                        <ul>
+                            <li><a href="register.html">Registrarse</a></li>
+                            <li><a href="login.html">Iniciar sesión</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <label for="search" class="sr-only">Buscar:</label>
+                <input type="text" id="search" name="q" placeholder="Buscar en el blog...">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="reviews.html">Reseñas</a></li>
+                <li><a href="stories.html">Historias</a></li>
+                <li><a href="guides.html">Guías</a></li>
+                <li><a href="events.html">Eventos</a></li>
+                <li><a href="profile.html">Mi perfil</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <aside class="faq">
+            <h2>Índice de Preguntas Frecuentes</h2>
+            <ul>
+                <li><a href="#aceite">¿Cómo elegir el aceite de motor adecuado?</a></li>
+                <li><a href="#frenos">¿Cómo saber cuándo cambiar el líquido de frenos?</a></li>
+                <li><a href="#combustible">¿Qué tipo de combustible debo usar?</a></li>
+                <li><a href="#neumaticos">¿Cómo comprobar el estado de los neumáticos?</a></li>
+                <li><a href="#baterias">¿Cómo mantener la batería de la moto?</a></li>
+                <li><a href="#cadena">¿Cómo cuidar la cadena de la motocicleta?</a></li>
+            </ul>
+        </aside>
+    
+        <section class="intro">
+            <style>
+                h1{
+                    text-align: center;
+                }
+            </style>
+            <h1>Cómo Cuidar Tu Motocicleta</h1>
+            <p>Para mantener tu motocicleta en excelente estado y asegurar un rendimiento óptimo, es crucial realizar un mantenimiento regular. Desde el aceite del motor hasta el sistema de frenos, cada aspecto de tu moto requiere atención para garantizar su funcionamiento seguro y prolongar su vida útil. A continuación, te ofrecemos una guía detallada para cada área clave de mantenimiento.</p>
+            
+            <h2 id="aceite">Aceite de Motor</h2>
+            <p>El aceite de motor es fundamental para el correcto funcionamiento de tu motocicleta. Su función principal es lubricar los componentes internos del motor, reducir el desgaste y mejorar el rendimiento general. También ayuda a enfriar el motor y a mantenerlo limpio al arrastrar los contaminantes hacia el filtro de aceite. Es importante controlar el nivel de aceite regularmente y cambiarlo según las recomendaciones del fabricante para evitar daños graves. Generalmente, se recomienda cambiar el aceite cada 3,000 a 5,000 kilómetros, pero esto puede variar según el tipo de aceite y las condiciones de uso.</p>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Marca</th>
+                            <th>Tipo</th>
+                            <th>Viscosidad</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Motul</td>
+                            <td>Sintético</td>
+                            <td>10W-40</td>
+                            <td>$35</td>
+                        </tr>
+                        <tr>
+                            <td>Castrol</td>
+                            <td>Mineral</td>
+                            <td>20W-50</td>
+                            <td>$28</td>
+                        </tr>
+                        <tr>
+                            <td>Valvoline</td>
+                            <td>Semisintético</td>
+                            <td>15W-40</td>
+                            <td>$32</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <h2 id="frenos">Sistema de Frenos</h2>
+            <p>El sistema de frenos es crucial para la seguridad en la conducción. Debes revisar regularmente el nivel del líquido de frenos y el estado de las pastillas de freno. El líquido de frenos debe ser reemplazado cada 2 años o según las indicaciones del fabricante, y las pastillas de freno deben ser revisadas cada 5,000 a 10,000 kilómetros, dependiendo del uso y las condiciones de conducción.</p>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Marca</th>
+                            <th>Tipo</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Brembo</td>
+                            <td>DOT 4</td>
+                            <td>$25</td>
+                        </tr>
+                        <tr>
+                            <td>TRW</td>
+                            <td>DOT 3</td>
+                            <td>$18</td>
+                        </tr>
+                        <tr>
+                            <td>Motul</td>
+                            <td>DOT 5.1</td>
+                            <td>$30</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <h2 id="combustible">Combustible</h2>
+            <p>Usar el tipo de combustible recomendado para tu motocicleta es clave para mantener el motor funcionando de manera eficiente. La gasolina regular es adecuada para la mayoría de las motos, pero si buscas mejor rendimiento y mayor protección del motor, puedes optar por gasolina premium. Para motos diesel, usa gasóleo específico. Mantén el sistema de combustible limpio y en buen estado para evitar problemas de arranque y rendimiento.</p>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tipo</th>
+                            <th>Uso</th>
+                            <th>Precio por Litro</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Gasolina Regular</td>
+                            <td>Uso General</td>
+                            <td>$1.25</td>
+                        </tr>
+                        <tr>
+                            <td>Gasolina Premium</td>
+                            <td>Mejor Rendimiento</td>
+                            <td>$1.55</td>
+                        </tr>
+                        <tr>
+                            <td>Gasóleo</td>
+                            <td>Motocicletas Diesel</td>
+                            <td>$1.35</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <h2 id="neumaticos">Neumáticos</h2>
+            <p>Es fundamental verificar la presión de los neumáticos y el desgaste de la banda de rodadura para garantizar una conducción segura. La presión debe ser revisada al menos una vez al mes, y los neumáticos deben ser reemplazados cuando el desgaste alcanza el nivel mínimo recomendado por el fabricante.</p>
+            
+            <h2 id="baterias">Baterías</h2>
+            <p>La batería de tu moto debe ser revisada periódicamente para asegurarte de que esté funcionando correctamente. Las baterías de ácido requieren mantenimiento regular, mientras que las de gel y litio tienen menos necesidades de mantenimiento. Reemplázala si muestra signos de debilidad para evitar problemas de arranque.</p>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Marca</th>
+                            <th>Tipo</th>
+                            <th>Voltaje</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Yuasa</td>
+                            <td>Ácido</td>
+                            <td>12V</td>
+                            <td>$45</td>
+                        </tr>
+                        <tr>
+                            <td>Shido</td>
+                            <td>Gel</td>
+                            <td>12V</td>
+                            <td>$55</td>
+                        </tr>
+                        <tr>
+                            <td>Antigravity</td>
+                            <td>Litio</td>
+                            <td>12V</td>
+                            <td>$85</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <h2 id="cadena">Cadena de Moto</h2>
+            <p>La cadena de tu motocicleta debe ser mantenida adecuadamente para asegurar una transferencia de potencia eficiente y prolongar su vida útil. Limpia y lubrica la cadena regularmente y verifica el ajuste para evitar desgastes prematuros.</p>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Marca</th>
+                            <th>Tipo</th>
+                            <th>Precio</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>RK</td>
+                            <td>Cadena de O-Ring</td>
+                            <td>$30</td>
+                        </tr>
+                        <tr>
+                            <td>DID</td>
+                            <td>Cadena de X-Ring</td>
+                            <td>$35</td>
+                        </tr>
+                        <tr>
+                            <td>EK</td>
+                            <td>Cadena de Z-Ring</td>
+                            <td>$32</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    
+            
+    </main>
+    
+    <footer>
+        <hr>
+        <section>
+            <h4><strong>Sobre el Blog</strong></h4>
+            <p>Este blog fue creado por <strong>Mateo Santiago Márquez</strong> en 2024. Todos los derechos reservados.</p>
+        </section>
+        <section>
+            <h4><strong>Contacto</strong></h4>
+            <ul>
+                <li><a href="mailto:msmarquez114@gmail.com">msmarquez114@gmail.com</a></li>
+                <li><a href="https://www.linkedin.com/in/mateo-santiago-marquez/" target="_blank">LinkedIn</a></li>
+            </ul>
+        </section>
+    </footer>
+    
+    <script src="control.js"></script>
+    
+    </body>
+</html>
